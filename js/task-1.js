@@ -64,7 +64,7 @@ console.log(message);
 console.log(totalPrice);*/
 
 //Ex5
-
+/*
 const countryName = null;
 const CANCELED_BY_USER = "Отменено пользователем!";
 const NO_DELIVERY = "В выбранную страну доставка недоступна.";
