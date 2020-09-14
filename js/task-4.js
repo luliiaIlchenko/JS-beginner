@@ -1,6 +1,17 @@
-/*Ex 1
+//https://js-homework-autocheck.goit.ua/?token=575be14ff5124d91153d4e6795e6eef3df63a2875b66a2745ea07315e3f6ccd4&block=abcdefg4
+/*Ex-1
+/*Callback функция
+Функция mapArray(array, cb), принимает 1-м параметром array - массив чисел, а вторым параметром cb - функцию обратного вызова (callback). Функция mapArray создает новый массив numbers и заполняет его числами из массива array преобразованными функцией cb.
+
+Оформи создание массива numbers нужной длины используя new Array () и необходимый аргумент для задания длины, равной длине array.
+
+Напиши функцию обратного вызова addIndex , которая принимает два параметра - element и index и возвращает число - сумму element и index (сложение).
+
+Напиши функцию обратного вызова subIndex , которая принимает два параметра - element и index и возвращает число - разность element и index (вычитание). */
+
+//Решение
 // Write code under this line
-const addIndex = (element, index) => element + index;
+/*const addIndex = (element, index) => element + index;
 // Write code under this line
 const subIndex = (element, index) => element - index;
 
@@ -27,7 +38,15 @@ console.log(mapArray(arr, addIndex));
 // [1, 1, 1, 1, 1]
 */
 
-//Ex 2
+//Ex-2
+/*Callback функция и метод push
+Функция isUniq принимает три параметра - element, index и arr. Функция возвращает true или false в зависимости от того встречается ли элемент первый раз в массиве (true) или этот элемент в массиве уже встречался (false) .
+
+Функция isEven принимает один параметр - element. Функция возвращает true или false в зависимости от того является ли элемент четным числом или нет.
+
+Функция filterArray(array, cb), принимает 1-м параметром array - массив чисел, а вторым параметром cb - функцию обратного вызова (callback). Дополни тело функции так, чтобы функция filterArray заполняла новый пустой массив numbers только теми элементами из массива array, для которых вызов функции cb вернет true. */
+
+//Решение
 /*const isUniq = (element, index, arr) => arr.indexOf(element) === index;
 const isEven = (element) => element % 2 === 0;
 
@@ -54,7 +73,13 @@ console.log(filterArray(arr, isUniq));
 // [2, 4, 2]
 */
 
-//Ex 3
+//Ex-3
+/*Callback функция для получения одного вычисляемого значения массива
+Функции add, sub и mult принимают два параметра - accum и element , возвращает число - сумму, разность или произведение параметров.
+
+Дополни тело функции reduceArray строкой присвоения accum вызова функции cb. Функция reduceArray должна будет подсчитать сумму или разность или произведение всех элементов массива в зависимости от того какая именно из трех функция (add, mult, sub) будет передана в качестве cb. */
+
+//Решение
 /*const add = (accum, element) => accum + element;
 const mult = (accum, element) => accum * element;
 const sub = (accum, element) => accum - element;
@@ -88,9 +113,15 @@ const arr = [1, 2, 3, 4, 5];
 //console.log(reduceArray(arr, mult, 10)); // 1200
 
 //console.log(reduceArray(arr, sub)); // -13
-//console.log(reduceArray(arr, sub, 10)); // -*/
+//console.log(reduceArray(arr, sub, 10)); // -5*/
 
-//Ex 4
+//Ex-4
+/*this в методах объекта
+Расставь отсутствующие this в методах объекта account.
+
+В комментариях показаны операции с объектом и ожидаемые результаты. */
+
+//Решение
 /*const account = {
     owner: 'Mango',
     balance: 24000,
@@ -124,7 +155,14 @@ account.addOrder(5000, 'order-4');
 //console.log(account.showOrders());
 // ['order-1', 'order-2', 'order-3', 'order-4']*/
 
-//Ex 5
+//Ex-5
+/*bind для замены this в методах объекта
+Оформи вызов метода invokeInventoryAction таким образом, чтобы в качестве this для методов
+
+inventory.add
+inventory.remove выступал объект inventory */
+
+//Решение
 /*const inventory = {
     items: ['Knife', 'Gas mask'],
     add(itemName) {

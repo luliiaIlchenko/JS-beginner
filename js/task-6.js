@@ -1,3 +1,4 @@
+//https://js-homework-autocheck.goit.ua/?token=575be14ff5124d91153d4e6795e6eef3df63a2875b66a2745ea07315e3f6ccd4&block=cdefghi6
 //Ex 1
 // Write code under this line
 /*const getUserNames = array => array.map(({ name }) => name);
@@ -632,10 +633,12 @@ const users = [
   },
 ];
 // Write code under this line
-const getSortedUniqueSkills = (array) => array.map(({ skills }) => skills)
-  .reduce((allSkills, user) => [...allSkills, ...user], [])
-  .filter((elem, index, array) => array.indexOf(elem) === index)
-  .sort();
+const getSortedUniqueSkills = (array) =>
+  array
+    .map(({ skills }) => skills)
+    .reduce((allSkills, user) => [...allSkills, ...user], [])
+    .filter((elem, index, array) => array.indexOf(elem) === index)
+    .sort();
 
 // console.log(getSortedUniqueSkills(users));
 /* [ 'adipisicing', 'amet',

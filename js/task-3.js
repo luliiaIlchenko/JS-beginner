@@ -1,4 +1,23 @@
-//Ex1
+//https://js-homework-autocheck.goit.ua/?token=575be14ff5124d91153d4e6795e6eef3df63a2875b66a2745ea07315e3f6ccd4&block=1abcdef3
+//Ex-1
+/*CRUD для свойств объекта
+С - create (создать)
+R - read (читать)
+U - update (обновить)
+D - delete (удалить)
+Напиши скрипт, который, для объекта user, последовательно:
+
+добавляет поле 'mood' со значением 'happy'
+добавляет поле 'full time' со значением true
+заменяет значение 'hobby' на 'skydiving'
+заменяет значение 'premium' на false
+в переменную message записывает содержимое объекта user:
+для переменной keys присваивает массив свойств объекта, используя метод Object.keys()
+с помощью оператора for...of
+в формате ключ:значение
+c переносом строки ('\n')*/
+
+//Решение
 /*let message = '';
 const user = {
     age: 20,
@@ -31,7 +50,13 @@ mood : happy
 "full time" : true
 ' */
 
-//Ex2
+//Ex-2
+/*Подсчет количества свойств в объекте
+Напиши функцию countProps(obj), которая возвращает число - количество свойств в объекте.
+
+Циклы не должны использоваться */
+
+//Решение
 /*const countProps = function (obj) {
     'use strict';
     // Write code under this line
@@ -45,24 +70,26 @@ mood : happy
 //console.log(countProps({a:1, b:1, c:1, d:1, e:1})); // 5
 
 
-//Ex3
+//Ex-3
+/*Поиск наибольшего значения среди свойств объекта
+Напиши функцию findBestEmployee(employees), которая принимает объект сотрудников и возвращает имя самого продуктивного (который выполнил больше всех задач). Сотрудники и кол-во выполненных задач содержатся как свойства объекта в формате "имя":"кол-во задач". */
 
-const findBestEmployee = function (employees) {
-  'use strict';
+//Решение
+/*const findBestEmployee = function (employees) {
+  "use strict";
   // Write code under this line
   let max = 0;
-    let bestEmployee = '';
+  let bestEmployee = "";
 
-
-    for (const employee in employees) {
-        const numOfTasks = employees[employee];
-        if (numOfTasks > max) {
-            max = numOfTasks;
-            bestEmployee = employee;
-        }
+  for (const employee in employees) {
+    const numOfTasks = employees[employee];
+    if (numOfTasks > max) {
+      max = numOfTasks;
+      bestEmployee = employee;
     }
+  }
 
-   return bestEmployee;
+  return bestEmployee;
 };
 
 // Объекты и ожидаемый результат
@@ -88,27 +115,32 @@ const sellers = {
   david: 21,
   kiwi: 19,
   chelsy: 38,
-}
+};
 //console.log(findBestEmployee(sellers));
 // 'lux'
 
-//Ex4
-const countTotalSalary = function(employees) {
-  'use strict';
-  // Write code under this line
-   let total=0;
-    for (const employee in employees) {
-      total+=employees[employee];
-    }
+//Ex-4
+/*Суммирование значений свойств объекта
+Напиши функцию countTotalSalary(employees) принимающую объект зарплат. Функция считает общую сумму зарплаты работников и возвращает ее. Каждое поле объекта, передаваемого в функцию, имеет вид "имя":"зарплата". */
 
-    return total;
+//Решение
+/*
+const countTotalSalary = function (employees) {
+  "use strict";
+  // Write code under this line
+  let total = 0;
+  for (const employee in employees) {
+    total += employees[employee];
+  }
+
+  return total;
 };
 
 // Объекты и ожидаемый результат
 const developers = {
-    mango: 300,
-    poly: 250,
-    alfred: 450,
+  mango: 300,
+  poly: 250,
+  alfred: 450,
 };
 //console.log(countTotalSalary(developers));
 // 1000
@@ -117,35 +149,47 @@ const supports = {
   kiwi: 200,
   lux: 150,
   chelsy: 150,
-}
+};
 //console.log(countTotalSalary(supports));
 // 500
-  //Ex5
-  function getAllPropValues (array, prop) {
-  'use strict';
+
+
+//Ex-5
+
+/*Оператор in и метод push
+Напиши функцию getAllPropValues(arr, prop), которая получает массив объектов и имя свойства.
+
+Функция возвращает массив значений определенного свойства prop из каждого объекта в массиве.
+
+Используй метод push для добавления значения в массив и оператор in для проверки наличия свойства в объекте. */
+
+//Решение
+/*
+function getAllPropValues(array, prop) {
+  "use strict";
   // Write code under this line
   const values = [];
 
-    for (const item of array) {
-        let value = item[prop];
+  for (const item of array) {
+    let value = item[prop];
 
-        if (value != undefined) {
-            values.push(value);
-        }
+    if (value != undefined) {
+      values.push(value);
     }
+  }
 
-    return values;
+  return values;
 }
 
 // Объекты и ожидаемый результат
 const products = [
-    { name: 'Радар', price: 1300, quantity: 4 },
-    { name: 'Радар', price: 1280, quantity: 2 },
-    { name: 'Радар', price: 1320, quantity: 1 },
-    { name: 'Сканер', price: 2700, quantity: 1 },
-    { name: 'Сканер', price: 2500, quantity: 3 },
-    { name: 'Дроид', price: 400, quantity: 7 },
-    { name: 'Захват', price: 1200, quantity: 2 },
+  { name: "Радар", price: 1300, quantity: 4 },
+  { name: "Радар", price: 1280, quantity: 2 },
+  { name: "Радар", price: 1320, quantity: 1 },
+  { name: "Сканер", price: 2700, quantity: 1 },
+  { name: "Сканер", price: 2500, quantity: 3 },
+  { name: "Дроид", price: 400, quantity: 7 },
+  { name: "Захват", price: 1200, quantity: 2 },
 ];
 
 //console.log(getAllPropValues(products, 'name'));
@@ -156,7 +200,24 @@ const products = [
 
 //console.log(getAllPropValues(products, 'category'));
 //  []*/
-//Ex6
+
+//Ex-6
+/*Суммирование значений свойства из массива объектов
+Напиши функцию calculateTotalPrice(allProdcuts, productName), которая получает массив объектов и имя продукта (значение свойства name). Возвращает общую стоимость продукта (цена умноженная на количество).
+
+Вызовы функции для проверки работоспособности твоей реализации.
+
+// calculateTotalPrice(products, 'Радар'));
+// 9080
+
+// calculateTotalPrice(products, 'Сканер')); // 10200
+
+// calculateTotalPrice(products, 'Захват')); // 2400
+
+// calculateTotalPrice(products, 'Дроид')); // 2800 */
+
+//Решение
+/*
 function calculateTotalPrice(array, prop) {
   "use strict";
   // Write code under this line
